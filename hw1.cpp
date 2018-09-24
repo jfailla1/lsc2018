@@ -5,17 +5,18 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char * argv[])
 {
 	int n;
+	n = stoi(argv[1]);
 	int* res = new int[n];
 	time_t time0;
 	time_t time1;
 	time_t time2;
 	time_t time3;
 
-	cout << "Please Enter N: " << endl;
-	cin >> n;
+	//cout << "Please Enter N: " << endl;
+	//cin >> n;
 	if (n <=1 || n>=20000){
 		cout << "Invalid Number" << endl;}
 	else{
