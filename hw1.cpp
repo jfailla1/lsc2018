@@ -26,7 +26,7 @@ int main(int argc, char * argv[])
 	int** A = new int*[n];
 	for (int i = 0; i < n; ++i)
 		A[i] = new int[n];
-
+/*
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < n; ++j)
 			A[i][j] = rand() % 10 + 1;
@@ -39,7 +39,7 @@ int main(int argc, char * argv[])
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < n; ++j)
 			trans[i][j] = 0;
-
+*/
 
 	//for (int i = 0; i < n; ++i)
 	//	for (int j = 0; j < n; ++j)
@@ -81,11 +81,11 @@ int main(int argc, char * argv[])
 
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < n; ++j)
-			trans[j][i]= A[i][j];
+			A[j][i]= A[i][j];
 
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < n; ++j)
-			res[i] += trans[i][j]*x[j];
+			res[i] += A[i][j]*x[j];
 
 	/*cout << "Transposed Result: " << endl;
 	for (int i = 0; i < n; ++i)
@@ -100,9 +100,9 @@ int main(int argc, char * argv[])
 	for (int i = 0; i < n; ++i)
 		delete [] A[i];
 			delete A;
-	for (int i = 0; i < n; ++i)
-		delete [] trans[i];
-			delete trans;
+	//for (int i = 0; i < n; ++i)
+	//	delete [] trans[i];
+	//		delete trans;
 	delete x;
 	delete res;
 	}
