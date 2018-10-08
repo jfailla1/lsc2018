@@ -1,0 +1,48 @@
+Size=50
+count=1000 |r|=4.81173e-07
+itr=1193
+|x - x0|=6.66147e-09
+Time cost (CPU) = 0(sec)
+Time cost (WALL CLOCK)= 0.00380111(sec)
+Size=50
+count=1000 |r|=3.38283e-07
+itr=1176
+|x - x0|=9.37529e-09
+Time cost (CPU) = 0(sec)
+Time cost (WALL CLOCK)= 0.00379086(sec)
+Size=50
+count=1000 |r|=2.45348e-07
+itr=1160
+|x - x0|=6.5934e-09
+Time cost (CPU) = 0.02(sec)
+Time cost (WALL CLOCK)= 0.00818491(sec)
+Size=50
+count=1000 |r|=2.03812e-07
+itr=1152
+|x - x0|=9.12082e-09
+Time cost (CPU) = 0.04(sec)
+Time cost (WALL CLOCK)= 0.00906515(sec)
+Size=50
+count=1000 |r|=2.44037e-07
+itr=1143
+|x - x0|=1.12284e-08
+Time cost (CPU) = 0.17(sec)
+Time cost (WALL CLOCK)= 0.030983(sec)
+Size=50
+count=1000 |r|=1.36453e-07
+itr=1132
+|x - x0|=1.15898e-08
+Time cost (CPU) = 0.32(sec)
+Time cost (WALL CLOCK)= 0.0347621(sec)
+Size=50
+count=1000 |r|=2.53615e-07
+itr=1124
+|x - x0|=1.51076e-08
+Time cost (CPU) = 0.78(sec)
+Time cost (WALL CLOCK)= 0.064661(sec)
+Size=50
+count=1000 |r|=1.78719e-07
+itr=1140
+|x - x0|=9.84672e-09
+Time cost (CPU) = 4.19(sec)
+Time cost (WALL CLOCK)= 0.236391(sec)

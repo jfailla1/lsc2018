@@ -59,49 +59,57 @@ int main(int argc, const char * argv[]) {
     const double tol = 1.0e-8;
     int count = 0;
     double start = clock();
+    double omp_start = omp_get_wtime();
+
     while(1){
-      // JACOBI step x(k+1) = A_ii^-1 (b - A_ij (i!=j) x(k))	
+      // JACOBI step x(k+1) = A_ii^-1 (b - A_ij (i!=j) x(k))
+	      
+	#pragma omp parallel for
 	for (int i = 0 ; i < size ; i++){
-	double sumAs = 0.0;
-	for (int j = 0 ; j < size ; j++){
-	  if (j == i) continue;
-	  sumAs += amat[i][j] * sol[j];
+		double sumAs = 0.0;
+		for (int j = 0 ; j < size ; j++){
+			if (j == i) continue;
+	  		sumAs += amat[i][j] * sol0[j];
 	}
-	sol[i] = (bvec[i] - sumAs) / amat[i][i];
-      }
-		
-        // compute residual |r| = |b-Ax|
-
-        double r = 0.0;
-        for (int i = 0 ; i < size ; i++){
-  		double sumAs = bvec[i];
-	for (int j = 0 ; j < size ; j++){
-		sumAs -= amat[i][j] * sol[j];
-	}
-	r += sumAs * sumAs;
-	// sol0[i] = sol[i];
+		sol[i] = (bvec[i] - sumAs) / amat[i][i];
+      	}
+      
+      // compute residual |r| = |b-Ax|
+	double r = 0.0;
+        #pragma omp parallel for
+	for (int i = 0 ; i < size ; i++){
+		double sumAs = bvec[i];
+		for (int j = 0 ; j < size ; j++){
+	  		sumAs -= amat[i][j] * sol[j];
+		}
+		r += sumAs * sumAs;
+		sol0[i] = sol[i];
+      	}      
+	r = std::sqrt(r);
+	count++;
+	if (r < tol) break;
 	
-      }      
-      r = std::sqrt(r);
-
-      count++;
-      if (r < tol) break;
-
-      if (count % 1000 == 0){
+	if (count % 1000 == 0){
 	std::cout << "count=" << count << " |r|=" << r << std::endl;
       }
     }
-    double tcost = (clock() - start) / CLOCKS_PER_SEC;
-    std::cout << "itr=" << count << std::endl;
-    std::cout << "Time cost = " << tcost << "(sec)\n";
+    	double tcost = (clock() - start) / CLOCKS_PER_SEC;
+    	std::cout << "itr=" << count << std::endl;
+    	//std::cout << "Time cost = " << tcost << "(sec)\n";
     
-    // check solution
-    double r = 0.0;
-    for (int i = 0; i < size; i++){
+    	// check solution
+    	double r = 0.0;
+    	#pragma omp parallel for
+	for (int i = 0; i < size; i++){
         double dr = sol[i] - xvec[i];
         r += dr * dr;
-    }
-    r = std::sqrt(r);
-    std::cout << "|x - x0|=" << r << std::endl;
-    return 0;
+   	}
+
+    	r = std::sqrt(r);
+    	std::cout << "|x - x0|=" << r << std::endl;
+    	double tcost = (clock() - start) / CLOCKS_PER_SEC;
+    	double omp_tcost = omp_get_wtime() - omp_start;
+    	std::cout << "Time cost (CPU) = " << tcost << "(sec)\n";
+    	std::cout << "Time cost (WALL CLOCK)= " << omp_tcost << "(sec)\n";
+    	return 0;
 }
