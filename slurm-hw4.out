@@ -1,0 +1,141 @@
+Size=500
+count=1000 |r|=1112.02
+count=2000 |r|=146.48
+count=3000 |r|=19.2948
+count=4000 |r|=2.54158
+count=5000 |r|=0.334785
+count=6000 |r|=0.044099
+count=7000 |r|=0.00580888
+count=8000 |r|=0.000765165
+count=9000 |r|=0.00010079
+count=10000 |r|=1.32764e-05
+count=11000 |r|=1.74891e-06
+count=12000 |r|=2.30443e-07
+count=13000 |r|=3.03874e-08
+itr=13553
+|x - x0|=6.54504e-09
+Time cost (CPU) = 2.28(sec)
+Time cost (WALL CLOCK)= 2.28229(sec)
+Size=500
+count=1000 |r|=786.194
+count=2000 |r|=103.593
+count=3000 |r|=13.6457
+count=4000 |r|=1.79688
+count=5000 |r|=0.236691
+count=6000 |r|=0.0311777
+count=7000 |r|=0.00410815
+count=8000 |r|=0.000540967
+count=9000 |r|=7.12808e-05
+count=10000 |r|=9.38935e-06
+count=11000 |r|=1.23702e-06
+count=12000 |r|=1.62809e-07
+count=13000 |r|=2.15135e-08
+itr=13381
+|x - x0|=9.27132e-09
+Time cost (CPU) = 2.46(sec)
+Time cost (WALL CLOCK)= 1.23375(sec)
+Size=500
+count=1000 |r|=555.698
+count=2000 |r|=73.1985
+count=3000 |r|=9.65106
+count=4000 |r|=1.27007
+count=5000 |r|=0.167298
+count=6000 |r|=0.0220371
+count=7000 |r|=0.0029028
+count=8000 |r|=0.000382366
+count=9000 |r|=5.03665e-05
+count=10000 |r|=6.6344e-06
+count=11000 |r|=8.74825e-07
+count=12000 |r|=1.15341e-07
+count=13000 |r|=1.51951e-08
+itr=13203
+|x - x0|=6.64764e-09
+Time cost (CPU) = 2.99(sec)
+Time cost (WALL CLOCK)= 0.749571(sec)
+Size=500
+count=1000 |r|=455.82
+count=2000 |r|=60.0421
+count=3000 |r|=7.90895
+count=4000 |r|=1.04179
+count=5000 |r|=0.13624
+count=6000 |r|=0.0180915
+count=7000 |r|=0.00238106
+count=8000 |r|=0.000313642
+count=9000 |r|=4.13139e-05
+count=10000 |r|=5.44208e-06
+count=11000 |r|=7.16802e-07
+count=12000 |r|=9.43232e-08
+count=13000 |r|=1.24375e-08
+itr=13106
+|x - x0|=9.35071e-09
+Time cost (CPU) = 3.92(sec)
+Time cost (WALL CLOCK)= 0.655015(sec)
+Size=500
+count=1000 |r|=392.325
+count=2000 |r|=51.6783
+count=3000 |r|=6.85143
+count=4000 |r|=0.90233
+count=5000 |r|=0.117936
+count=6000 |r|=0.0155582
+count=7000 |r|=0.00206268
+count=8000 |r|=0.000269952
+count=9000 |r|=3.57897e-05
+count=10000 |r|=4.71434e-06
+count=11000 |r|=6.17179e-07
+count=12000 |r|=8.1719e-08
+count=13000 |r|=1.0819e-08
+itr=13035
+|x - x0|=9.34216e-09
+Time cost (CPU) = 7.22(sec)
+Time cost (WALL CLOCK)= 0.909109(sec)
+Size=500
+count=1000 |r|=321.852
+count=2000 |r|=41.9931
+count=3000 |r|=5.53148
+count=4000 |r|=0.737564
+count=5000 |r|=0.0960128
+count=6000 |r|=0.0127877
+count=7000 |r|=0.00168104
+count=8000 |r|=0.000219441
+count=9000 |r|=2.88947e-05
+count=10000 |r|=3.80762e-06
+count=11000 |r|=5.0737e-07
+count=12000 |r|=6.60672e-08
+itr=12934
+|x - x0|=1.15097e-08
+Time cost (CPU) = 32.51(sec)
+Time cost (WALL CLOCK)= 2.71266(sec)
+Size=500
+count=1000 |r|=277.309
+count=2000 |r|=37.1337
+count=3000 |r|=4.80734
+count=4000 |r|=0.64431
+count=5000 |r|=0.0834124
+count=6000 |r|=0.0109824
+count=7000 |r|=0.00144977
+count=8000 |r|=0.000190094
+count=9000 |r|=2.5459e-05
+count=10000 |r|=3.30776e-06
+count=11000 |r|=4.41709e-07
+count=12000 |r|=5.83529e-08
+itr=12864
+|x - x0|=1.31577e-08
+Time cost (CPU) = 57.03(sec)
+Time cost (WALL CLOCK)= 3.57026(sec)
+Size=500
+count=1000 |r|=248.887
+count=2000 |r|=32.7464
+count=3000 |r|=4.31069
+count=4000 |r|=0.568743
+count=5000 |r|=0.0748432
+count=6000 |r|=0.0098586
+count=7000 |r|=0.00129988
+count=8000 |r|=0.000170849
+count=9000 |r|=2.2585e-05
+count=10000 |r|=2.96432e-06
+count=11000 |r|=3.91925e-07
+count=12000 |r|=5.16012e-08
+itr=12808
+|x - x0|=1.47972e-08
+Time cost (CPU) = 76.59(sec)
+Time cost (WALL CLOCK)= 3.85487(sec)
