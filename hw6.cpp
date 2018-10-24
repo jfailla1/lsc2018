@@ -31,11 +31,11 @@ int main(int argc, char **argv) {
 	
   	// Simulation
   	std::ofstream fout;
-  	fout.open("hw06.txt");
+  	fout.open("hw06.csv");
   	const double dt = 0.01;
   	double simulationTime = 0.0;
   	while(position[1] >= 0.0){
-    		fout << simulationTime << " " << position[0] << " " << position[1] << " " << velocity[0] << " " << velocity[1] << std::endl;
+    		fout << simulationTime << "," << position[0] << "," << position[1] << "," << velocity[0] << "," << velocity[1] << std::endl;
 	 	position += velocity * dt;
 		velocity += acceleration * dt;
 		simulationTime += dt;
