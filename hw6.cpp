@@ -28,6 +28,7 @@ int main(int argc, char **argv) {
   	Eigen::Vector2d acceleration;
   	acceleration << 0.0, g;
 	Eigen::Vector2d G;
+	G << 0.0, g;
 	
   	// Simulation
   	std::ofstream fout;
@@ -39,7 +40,7 @@ int main(int argc, char **argv) {
 	 	position += velocity * dt;
 		velocity += acceleration * dt;
 		simulationTime += dt;
-		acceleration += G - drag*velocity.norm()*velocity; 	
+		acceleration = G - drag*velocity.norm()*velocity; 	
 	}
   	fout.close();
   	return 0;
