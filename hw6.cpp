@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
 	 	position += velocity * dt;
 		velocity += acceleration * dt;
 		simulationTime += dt;
-		acceleration = G - drag*velocity.norm()*velocity; 	
+		acceleration = G - (drag*velocity.norm()*velocity/weight); 	
 	}
   	fout.close();
   	return 0;
