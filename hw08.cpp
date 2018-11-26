@@ -151,22 +151,25 @@ int main(int argc, char **argv) {
 		vx += vel[i * DIM];
 		vy += vel[i * DIM + 1];
 	}
-	vx /= mysize;
-	vy /= mysize;
+	//vx /= mysize;
+	//vy /= mysize;
 	
 	MPI::COMM_WORLD.Barrier();
-	double vx_t, vy_t, et_t, st_t;
+	double vx_t, vy_t, et_t; // st_t;
 
 	// Send the vars to rank 0
 	MPI::COMM_WORLD.Reduce(&vx, &vx_t, 1, MPI::DOUBLE, MPI::SUM, 0);
 	MPI::COMM_WORLD.Reduce(&vy, &vy_t, 1, MPI::DOUBLE, MPI::SUM, 0);
-	MPI::COMM_WORLD.Reduce(&et, &et_t, 1, MPI::DOUBLE, MPI::SUM, 0);
-	MPI::COMM_WORLD.Reduce(&st, &st_t, 1, MPI::DOUBLE, MPI::SUM, 0);
+	MPI::COMM_WORLD.Reduce(&et, &et_t, 1, MPI::DOUBLE, MPI::MAX, 0);
+	//MPI::COMM_WORLD.Reduce(&st, &st_t, 1, MPI::DOUBLE, MPI::SUM, 0);
 
 	if (myid == 0){
 	// Show Results
-	std::cout << "Mean Velocity = (" << vx_t << "," << vy_t << ")\n";
-	std::cout << "Time cost = " << et_t - st_t << "(sec)\n";
+		vx_t /= numOfParticles;
+		vy_t /= numOfParticles;
+
+		std::cout << "Mean Velocity = (" << vx_t << "," << vy_t << ")\n";
+		std::cout << "Time cost = " << et_t - st << "(sec)\n";
 	}
 
 	// cleanup
