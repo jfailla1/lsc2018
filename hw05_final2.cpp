@@ -79,13 +79,13 @@ int main(int argc, char **argv) {
 		srand(time(NULL));
 		loc[i * DIM] = static_cast<double>(rand()) / RAND_MAX;
 		loc[i * DIM + 1] = static_cast<double>(rand()) / RAND_MAX;
-		foc[i * DIM] = static_cast<double(rand()) / RAND_MAX - 0.5;
+		foc[i * DIM] = static_cast<double>(rand()) / RAND_MAX - 0.5;
 		foc[i * DIM + 1] = static_cast<double>(rand()) / RAND_MAX - 0.5;
 	}
 
 	/// Compute Velocities
 	double st = tsecond();
-	int bsize = numOfparticles/10;
+	int bsize = numOfParticles/10;
 	#pragma omp parallel for
 	for (int i = 0; i < numOfParticles; i++) {
 		for (int p = 0; p < numOfParticles; p++){

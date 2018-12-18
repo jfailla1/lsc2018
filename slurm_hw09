@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH --qos=normal		# Quality of Service
+#SBATCH --job-name=hw09         # Job Name
+#SBATCH --time=05:00:00		# WallTime
+#SBATCH --nodes=1 		# Number of Nodes
+#SBATCH --ntasks-per-node=16 	# Number of tasks (MPI presseces)
+#SBATCH --cpus-per-task=1 	# Number of processors per task OpenMP threads()
+#SBATCH --gres=mic:0  		# Number of Co-Processors
+
+module load intel-psxe
+module load petsc/3.5.4
+
+pwd
+
+echo "DIR=" $SLURM_SUBMIT_DIR
+echo "TASKS_PER_NODE=" $SLURM_TASKS_PER_NODE
+echo "NNODES=" $SLURM_NNODES
+echo "NTASKS" $SLURM_NTASKS
+echo "JOB_CPUS_PER_NODE" $SLURM_JOB_CPUS_PER_NODE
+echo $SLURM_NODELIST
+
+time mpirun ./a.out -n 1000 -p 1 -q 16
+
+echo
+echo
+
+time mpirun ./a.out -n 1000 -p 2 -q 8
+
+echo
+echo
+
+time mpirun ./a.out -n 1000 -p 4 -q 4
+
+echo
+echo
+
+time mpirun ./a.out -np 8 -n 1000 -p 4 -q 4
+
+echo
+echo
+
+time mpirin ./a.out -np 4 -n 1000 -p 4 -q 4
+
+
