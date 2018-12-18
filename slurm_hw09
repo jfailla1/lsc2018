@@ -39,6 +39,6 @@ time mpirun ./a.out -np 8 -n 1000 -p 4 -q 4
 echo
 echo
 
-time mpirin ./a.out -np 4 -n 1000 -p 4 -q 4
+time mpirun ./a.out -np 4 -n 1000 -p 4 -q 4
 
 

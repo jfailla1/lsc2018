@@ -1,0 +1,440 @@
+/home/jfailla1/HeatMass
+DIR= /home/jfailla1/HeatMass
+TASKS_PER_NODE= 16
+NNODES= 1
+NTASKS 16
+JOB_CPUS_PER_NODE 16
+cypress01-046
+Proc0: X 0~1000 Y 0~63
+Proc1: X 0~1000 Y 63~126
+Proc2: X 0~1000 Y 126~189
+Proc3: X 0~1000 Y 189~252
+Proc4: X 0~1000 Y 252~315
+Proc5: X 0~1000 Y 315~378
+Proc6: X 0~1000 Y 378~441
+Proc7: X 0~1000 Y 441~504
+Proc8: X 0~1000 Y 504~566
+Proc9: X 0~1000 Y 566~628
+Proc10: X 0~1000 Y 628~690
+Proc11: X 0~1000 Y 690~752
+Proc12: X 0~1000 Y 752~814
+Proc13: X 0~1000 Y 814~876
+Proc14: X 0~1000 Y 876~938
+Proc15: X 0~1000 Y 938~1000
+Proc0: Vec phi 0~63000
+Proc1: Vec phi 63000~126000
+Proc2: Vec phi 126000~189000
+Proc3: Vec phi 189000~252000
+Proc4: Vec phi 252000~315000
+Proc5: Vec phi 315000~378000
+Proc6: Vec phi 378000~441000
+Proc7: Vec phi 441000~504000
+Proc8: Vec phi 504000~566000
+Proc9: Vec phi 566000~628000
+Proc10: Vec phi 628000~690000
+Proc11: Vec phi 690000~752000
+Proc12: Vec phi 752000~814000
+Proc13: Vec phi 814000~876000
+Proc14: Vec phi 876000~938000
+Proc15: Vec phi 938000~1000000
+KSP Object: 16 MPI processes
+  type: gmres
+    GMRES: restart=30, using Classical (unmodified) Gram-Schmidt Orthogonalization with no iterative refinement
+    GMRES: happy breakdown tolerance 1e-30
+  maximum iterations=10000, initial guess is zero
+  tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+  left preconditioning
+  using PRECONDITIONED norm type for convergence test
+PC Object: 16 MPI processes
+  type: bjacobi
+    block Jacobi: number of blocks = 16
+    Local solve is same for all blocks, in the following KSP and PC objects:
+  KSP Object:  (sub_)   1 MPI processes
+    type: preonly
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+    left preconditioning
+    using NONE norm type for convergence test
+  PC Object:  (sub_)   1 MPI processes
+    type: ilu
+      ILU: out-of-place factorization
+      0 levels of fill
+      tolerance for zero pivot 2.22045e-14
+      using diagonal shift on blocks to prevent zero pivot [INBLOCKS]
+      matrix ordering: natural
+      factor fill ratio given 1, needed 1
+        Factored matrix follows:
+          Mat Object:           1 MPI processes
+            type: seqaij
+            rows=63000, cols=63000
+            package used to perform factorization: petsc
+            total: nonzeros=309506, allocated nonzeros=309506
+            total number of mallocs used during MatSetValues calls =0
+              not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object:     1 MPI processes
+      type: seqaij
+      rows=63000, cols=63000
+      total: nonzeros=309506, allocated nonzeros=315000
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+  linear system matrix = precond matrix:
+  Mat Object:   16 MPI processes
+    type: mpiaij
+    rows=1000000, cols=1000000
+    total: nonzeros=4.98402e+06, allocated nonzeros=1e+07
+    total number of mallocs used during MatSetValues calls =0
+      not using I-node (on process 0) routines
+Time Cost = 2.505204e+01(s)
+
+real	0m25.681s
+user	0m0.010s
+sys	0m0.017s
+
+
+Proc0: X 0~500 Y 0~125
+Proc1: X 0~500 Y 125~250
+Proc2: X 0~500 Y 250~375
+Proc3: X 0~500 Y 375~500
+Proc4: X 0~500 Y 500~625
+Proc5: X 0~500 Y 625~750
+Proc6: X 0~500 Y 750~875
+Proc7: X 0~500 Y 875~1000
+Proc8: X 500~1000 Y 0~125
+Proc9: X 500~1000 Y 125~250
+Proc10: X 500~1000 Y 250~375
+Proc11: X 500~1000 Y 375~500
+Proc12: X 500~1000 Y 500~625
+Proc13: X 500~1000 Y 625~750
+Proc14: X 500~1000 Y 750~875
+Proc15: X 500~1000 Y 875~1000
+Proc0: Vec phi 0~62500
+Proc1: Vec phi 62500~125000
+Proc2: Vec phi 125000~187500
+Proc3: Vec phi 187500~250000
+Proc4: Vec phi 250000~312500
+Proc5: Vec phi 312500~375000
+Proc6: Vec phi 375000~437500
+Proc7: Vec phi 437500~500000
+Proc8: Vec phi 500000~562500
+Proc9: Vec phi 562500~625000
+Proc10: Vec phi 625000~687500
+Proc11: Vec phi 687500~750000
+Proc12: Vec phi 750000~812500
+Proc13: Vec phi 812500~875000
+Proc14: Vec phi 875000~937500
+Proc15: Vec phi 937500~1000000
+KSP Object: 16 MPI processes
+  type: gmres
+    GMRES: restart=30, using Classical (unmodified) Gram-Schmidt Orthogonalization with no iterative refinement
+    GMRES: happy breakdown tolerance 1e-30
+  maximum iterations=10000, initial guess is zero
+  tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+  left preconditioning
+  using PRECONDITIONED norm type for convergence test
+PC Object: 16 MPI processes
+  type: bjacobi
+    block Jacobi: number of blocks = 16
+    Local solve is same for all blocks, in the following KSP and PC objects:
+  KSP Object:  (sub_)   1 MPI processes
+    type: preonly
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+    left preconditioning
+    using NONE norm type for convergence test
+  PC Object:  (sub_)   1 MPI processes
+    type: ilu
+      ILU: out-of-place factorization
+      0 levels of fill
+      tolerance for zero pivot 2.22045e-14
+      using diagonal shift on blocks to prevent zero pivot [INBLOCKS]
+      matrix ordering: natural
+      factor fill ratio given 1, needed 1
+        Factored matrix follows:
+          Mat Object:           1 MPI processes
+            type: seqaij
+            rows=62500, cols=62500
+            package used to perform factorization: petsc
+            total: nonzeros=309381, allocated nonzeros=309381
+            total number of mallocs used during MatSetValues calls =0
+              not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object:     1 MPI processes
+      type: seqaij
+      rows=62500, cols=62500
+      total: nonzeros=309381, allocated nonzeros=312500
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+  linear system matrix = precond matrix:
+  Mat Object:   16 MPI processes
+    type: mpiaij
+    rows=1000000, cols=1000000
+    total: nonzeros=4.98402e+06, allocated nonzeros=1e+07
+    total number of mallocs used during MatSetValues calls =0
+      not using I-node (on process 0) routines
+Time Cost = 2.966846e+01(s)
+
+real	0m30.247s
+user	0m0.011s
+sys	0m0.014s
+
+
+Proc0: X 0~250 Y 0~250
+Proc1: X 0~250 Y 250~500
+Proc2: X 0~250 Y 500~750
+Proc3: X 0~250 Y 750~1000
+Proc4: X 250~500 Y 0~250
+Proc5: X 250~500 Y 250~500
+Proc6: X 250~500 Y 500~750
+Proc7: X 250~500 Y 750~1000
+Proc8: X 500~750 Y 0~250
+Proc9: X 500~750 Y 250~500
+Proc10: X 500~750 Y 500~750
+Proc11: X 500~750 Y 750~1000
+Proc12: X 750~1000 Y 0~250
+Proc13: X 750~1000 Y 250~500
+Proc14: X 750~1000 Y 500~750
+Proc15: X 750~1000 Y 750~1000
+Proc0: Vec phi 0~62500
+Proc1: Vec phi 62500~125000
+Proc2: Vec phi 125000~187500
+Proc3: Vec phi 187500~250000
+Proc4: Vec phi 250000~312500
+Proc5: Vec phi 312500~375000
+Proc6: Vec phi 375000~437500
+Proc7: Vec phi 437500~500000
+Proc8: Vec phi 500000~562500
+Proc9: Vec phi 562500~625000
+Proc10: Vec phi 625000~687500
+Proc11: Vec phi 687500~750000
+Proc12: Vec phi 750000~812500
+Proc13: Vec phi 812500~875000
+Proc14: Vec phi 875000~937500
+Proc15: Vec phi 937500~1000000
+KSP Object: 16 MPI processes
+  type: gmres
+    GMRES: restart=30, using Classical (unmodified) Gram-Schmidt Orthogonalization with no iterative refinement
+    GMRES: happy breakdown tolerance 1e-30
+  maximum iterations=10000, initial guess is zero
+  tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+  left preconditioning
+  using PRECONDITIONED norm type for convergence test
+PC Object: 16 MPI processes
+  type: bjacobi
+    block Jacobi: number of blocks = 16
+    Local solve is same for all blocks, in the following KSP and PC objects:
+  KSP Object:  (sub_)   1 MPI processes
+    type: preonly
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+    left preconditioning
+    using NONE norm type for convergence test
+  PC Object:  (sub_)   1 MPI processes
+    type: ilu
+      ILU: out-of-place factorization
+      0 levels of fill
+      tolerance for zero pivot 2.22045e-14
+      using diagonal shift on blocks to prevent zero pivot [INBLOCKS]
+      matrix ordering: natural
+      factor fill ratio given 1, needed 1
+        Factored matrix follows:
+          Mat Object:           1 MPI processes
+            type: seqaij
+            rows=62500, cols=62500
+            package used to perform factorization: petsc
+            total: nonzeros=310006, allocated nonzeros=310006
+            total number of mallocs used during MatSetValues calls =0
+              not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object:     1 MPI processes
+      type: seqaij
+      rows=62500, cols=62500
+      total: nonzeros=310006, allocated nonzeros=312500
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+  linear system matrix = precond matrix:
+  Mat Object:   16 MPI processes
+    type: mpiaij
+    rows=1000000, cols=1000000
+    total: nonzeros=4.98402e+06, allocated nonzeros=1e+07
+    total number of mallocs used during MatSetValues calls =0
+      not using I-node (on process 0) routines
+Time Cost = 1.484902e+01(s)
+
+real	0m15.355s
+user	0m0.011s
+sys	0m0.017s
+
+
+Proc0: X 0~250 Y 0~250
+Proc1: X 0~250 Y 250~500
+Proc2: X 0~250 Y 500~750
+Proc3: X 0~250 Y 750~1000
+Proc4: X 250~500 Y 0~250
+Proc5: X 250~500 Y 250~500
+Proc6: X 250~500 Y 500~750
+Proc7: X 250~500 Y 750~1000
+Proc8: X 500~750 Y 0~250
+Proc9: X 500~750 Y 250~500
+Proc10: X 500~750 Y 500~750
+Proc11: X 500~750 Y 750~1000
+Proc12: X 750~1000 Y 0~250
+Proc13: X 750~1000 Y 250~500
+Proc14: X 750~1000 Y 500~750
+Proc15: X 750~1000 Y 750~1000
+Proc0: Vec phi 0~62500
+Proc1: Vec phi 62500~125000
+Proc2: Vec phi 125000~187500
+Proc3: Vec phi 187500~250000
+Proc4: Vec phi 250000~312500
+Proc5: Vec phi 312500~375000
+Proc6: Vec phi 375000~437500
+Proc7: Vec phi 437500~500000
+Proc8: Vec phi 500000~562500
+Proc9: Vec phi 562500~625000
+Proc10: Vec phi 625000~687500
+Proc11: Vec phi 687500~750000
+Proc12: Vec phi 750000~812500
+Proc13: Vec phi 812500~875000
+Proc14: Vec phi 875000~937500
+Proc15: Vec phi 937500~1000000
+KSP Object: 16 MPI processes
+  type: gmres
+    GMRES: restart=30, using Classical (unmodified) Gram-Schmidt Orthogonalization with no iterative refinement
+    GMRES: happy breakdown tolerance 1e-30
+  maximum iterations=10000, initial guess is zero
+  tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+  left preconditioning
+  using PRECONDITIONED norm type for convergence test
+PC Object: 16 MPI processes
+  type: bjacobi
+    block Jacobi: number of blocks = 16
+    Local solve is same for all blocks, in the following KSP and PC objects:
+  KSP Object:  (sub_)   1 MPI processes
+    type: preonly
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+    left preconditioning
+    using NONE norm type for convergence test
+  PC Object:  (sub_)   1 MPI processes
+    type: ilu
+      ILU: out-of-place factorization
+      0 levels of fill
+      tolerance for zero pivot 2.22045e-14
+      using diagonal shift on blocks to prevent zero pivot [INBLOCKS]
+      matrix ordering: natural
+      factor fill ratio given 1, needed 1
+        Factored matrix follows:
+          Mat Object:           1 MPI processes
+            type: seqaij
+            rows=62500, cols=62500
+            package used to perform factorization: petsc
+            total: nonzeros=310006, allocated nonzeros=310006
+            total number of mallocs used during MatSetValues calls =0
+              not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object:     1 MPI processes
+      type: seqaij
+      rows=62500, cols=62500
+      total: nonzeros=310006, allocated nonzeros=312500
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+  linear system matrix = precond matrix:
+  Mat Object:   16 MPI processes
+    type: mpiaij
+    rows=1000000, cols=1000000
+    total: nonzeros=4.98402e+06, allocated nonzeros=1e+07
+    total number of mallocs used during MatSetValues calls =0
+      not using I-node (on process 0) routines
+Time Cost = 1.486063e+01(s)
+
+real	0m15.471s
+user	0m0.012s
+sys	0m0.013s
+
+
+Proc0: X 0~250 Y 0~250
+Proc1: X 0~250 Y 250~500
+Proc2: X 0~250 Y 500~750
+Proc3: X 0~250 Y 750~1000
+Proc4: X 250~500 Y 0~250
+Proc5: X 250~500 Y 250~500
+Proc6: X 250~500 Y 500~750
+Proc7: X 250~500 Y 750~1000
+Proc8: X 500~750 Y 0~250
+Proc9: X 500~750 Y 250~500
+Proc10: X 500~750 Y 500~750
+Proc11: X 500~750 Y 750~1000
+Proc12: X 750~1000 Y 0~250
+Proc13: X 750~1000 Y 250~500
+Proc14: X 750~1000 Y 500~750
+Proc15: X 750~1000 Y 750~1000
+Proc0: Vec phi 0~62500
+Proc1: Vec phi 62500~125000
+Proc2: Vec phi 125000~187500
+Proc3: Vec phi 187500~250000
+Proc4: Vec phi 250000~312500
+Proc5: Vec phi 312500~375000
+Proc6: Vec phi 375000~437500
+Proc7: Vec phi 437500~500000
+Proc8: Vec phi 500000~562500
+Proc9: Vec phi 562500~625000
+Proc10: Vec phi 625000~687500
+Proc11: Vec phi 687500~750000
+Proc12: Vec phi 750000~812500
+Proc13: Vec phi 812500~875000
+Proc14: Vec phi 875000~937500
+Proc15: Vec phi 937500~1000000
+KSP Object: 16 MPI processes
+  type: gmres
+    GMRES: restart=30, using Classical (unmodified) Gram-Schmidt Orthogonalization with no iterative refinement
+    GMRES: happy breakdown tolerance 1e-30
+  maximum iterations=10000, initial guess is zero
+  tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+  left preconditioning
+  using PRECONDITIONED norm type for convergence test
+PC Object: 16 MPI processes
+  type: bjacobi
+    block Jacobi: number of blocks = 16
+    Local solve is same for all blocks, in the following KSP and PC objects:
+  KSP Object:  (sub_)   1 MPI processes
+    type: preonly
+    maximum iterations=10000, initial guess is zero
+    tolerances:  relative=1e-05, absolute=1e-50, divergence=10000
+    left preconditioning
+    using NONE norm type for convergence test
+  PC Object:  (sub_)   1 MPI processes
+    type: ilu
+      ILU: out-of-place factorization
+      0 levels of fill
+      tolerance for zero pivot 2.22045e-14
+      using diagonal shift on blocks to prevent zero pivot [INBLOCKS]
+      matrix ordering: natural
+      factor fill ratio given 1, needed 1
+        Factored matrix follows:
+          Mat Object:           1 MPI processes
+            type: seqaij
+            rows=62500, cols=62500
+            package used to perform factorization: petsc
+            total: nonzeros=310006, allocated nonzeros=310006
+            total number of mallocs used during MatSetValues calls =0
+              not using I-node routines
+    linear system matrix = precond matrix:
+    Mat Object:     1 MPI processes
+      type: seqaij
+      rows=62500, cols=62500
+      total: nonzeros=310006, allocated nonzeros=312500
+      total number of mallocs used during MatSetValues calls =0
+        not using I-node routines
+  linear system matrix = precond matrix:
+  Mat Object:   16 MPI processes
+    type: mpiaij
+    rows=1000000, cols=1000000
+    total: nonzeros=4.98402e+06, allocated nonzeros=1e+07
+    total number of mallocs used during MatSetValues calls =0
+      not using I-node (on process 0) routines
+Time Cost = 1.487239e+01(s)
+
+real	0m15.429s
+user	0m0.010s
+sys	0m0.014s
